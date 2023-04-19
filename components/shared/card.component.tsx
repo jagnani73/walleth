@@ -14,8 +14,8 @@ const Card: React.FC<CardProps> = ({ age, bought, floor, img, owner }) => {
           height={193}
           className="rounded-[4px]"
         />
-        <figcaption className="absolute bottom-1 right-1 rounded-[31px] bg-black bg-opacity-5 px-[6px] py-px text-xs font-medium text-white backdrop-blur-[3px]">
-          <span className="leading-5">{age}</span>
+        <figcaption className="absolute bottom-1 right-1 rounded-[31px] bg-black bg-opacity-50 px-[6px] py-px text-xs font-medium leading-5 text-white backdrop-blur-[3px]">
+          {age}
         </figcaption>
       </figure>
 

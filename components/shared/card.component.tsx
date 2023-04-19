@@ -20,12 +20,14 @@ const Card: React.FC<CardProps> = ({ age, bought, floor, img, owner }) => {
       </figure>
 
       <div className="flex w-full flex-col gap-y-4 p-1">
-        <p className="text-sm font-medium text-seasalt">{owner}</p>
+        <p className="text-sm font-medium leading-5 text-seasalt">{owner}</p>
 
         <div className="flex justify-between">
-          <p className="text-xs text-silver">Bought</p>
+          <p className="text-xs leading-5 text-silver">Bought</p>
           <p className="flex items-center gap-x-1">
-            <span className="text-xs font-medium text-seasalt">{bought}</span>
+            <span className="text-xs font-medium leading-5 text-seasalt">
+              {bought}
+            </span>
             <span className="flex h-3 w-3">
               <EthereumLogo />
             </span>
@@ -33,10 +35,10 @@ const Card: React.FC<CardProps> = ({ age, bought, floor, img, owner }) => {
         </div>
 
         <div className="flex justify-between">
-          <p className="text-xs text-silver">Floor</p>
+          <p className="text-xs leading-5 text-silver">Floor</p>
           <div className="flex gap-x-1">
             <p className="flex items-center gap-x-1">
-              <span className="text-xs font-medium text-seasalt">
+              <span className="text-xs font-medium leading-5 text-seasalt">
                 {floor.value}
               </span>
               <span className="flex h-3 w-3">

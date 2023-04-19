@@ -15,3 +15,16 @@ export interface DetailsProps {
     special: boolean;
   }[];
 }
+
+export interface CardProps {
+  img: string;
+  age: string;
+  owner: string;
+  bought: number;
+  floor: {
+    value: number;
+    percentage: number;
+    increment: boolean;
+  };
+}
+

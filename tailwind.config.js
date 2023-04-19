@@ -18,6 +18,7 @@ module.exports = {
         silver: "#A2A2A2",
         "eerie-black": "#1A1A1A",
         seasalt: "#FAFAFA",
+        "spring-green": "#19ED7B",
       },
     },
   },

@@ -29,19 +29,25 @@ const HighlightComponent: React.FC<HighlightProps> = ({
 
         <div className="flex w-full flex-col gap-y-2 truncate">
           <p className="flex w-full truncate">
-            <p className="truncate text-sm font-medium text-seasalt">
+            <p className="truncate text-sm font-medium leading-5 text-seasalt">
               {collection}
             </p>
           </p>
-          <p className="px-2 py-1 text-xs text-spring-green">{status}</p>
+          <p className="px-2 py-1 text-xs leading-5 text-spring-green">
+            {status}
+          </p>
         </div>
       </div>
 
       <div className="flex w-full flex-col gap-y-2">
         <div className="flex justify-between">
-          <p className="text-xs font-medium text-silver">{owner}</p>
+          <p className="text-xs font-medium leading-5 tracking-[0.05px] text-silver">
+            {owner}
+          </p>
           <p className="flex items-center gap-x-1">
-            <span className="text-xs font-medium text-seasalt">{cost}</span>
+            <span className="text-xs font-medium leading-5 text-seasalt">
+              {cost}
+            </span>
             <span className="flex h-3 w-3">
               <EthereumLogo />
             </span>
@@ -49,8 +55,8 @@ const HighlightComponent: React.FC<HighlightProps> = ({
         </div>
 
         <div className="flex justify-between">
-          <p className="text-xs text-silver">{age}</p>
-          <p className="text-xs text-spring-green">+{xp}XP</p>
+          <p className="text-xs leading-5 text-silver">{age}</p>
+          <p className="text-xs leading-5 text-spring-green">+{xp}XP</p>
         </div>
       </div>
     </article>

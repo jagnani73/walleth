@@ -1,3 +1,5 @@
+import type { NFT_STATUS } from "../constants/shared.constants";
+
 export interface DetailsProps {
   img: string;
   ens: string;
@@ -28,3 +30,12 @@ export interface CardProps {
   };
 }
 
+export interface HighlightProps {
+  collection: string;
+  status: NFT_STATUS;
+  img: string;
+  owner: string;
+  cost: number;
+  age: string;
+  xp: number;
+}

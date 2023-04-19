@@ -19,6 +19,10 @@ module.exports = {
         "eerie-black": "#1A1A1A",
         seasalt: "#FAFAFA",
         "spring-green": "#19ED7B",
+        "pacific-cyan": {
+          DEFAULT: "#25b5d4",
+          10: "#25b5d433",
+        },
       },
     },
   },

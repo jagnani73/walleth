@@ -112,7 +112,7 @@ const HomeScreen: React.FC = () => {
       },
       {
         age: "10 days ago",
-        collection: "Should have sold",
+        collection: "Should have been sold",
         cost: 95.2,
         img: "/nft.png",
         owner: "CryptoPunk #2131",
@@ -134,9 +134,9 @@ const HomeScreen: React.FC = () => {
 
   return (
     <main>
-      <div>
-        {DETAILS.map((details) => (
-          <DetailsComponent key={details.address} {...details} />
+      <div className="mt-8 flex gap-x-8">
+        {HIGHLIGHTS.map((highlight) => (
+          <HighlightComponent key={highlight.collection} {...highlight} />
         ))}
       </div>
 
@@ -147,8 +147,8 @@ const HomeScreen: React.FC = () => {
       </div>
 
       <div className="mt-8 flex gap-x-8">
-        {HIGHLIGHTS.map((highlight) => (
-          <HighlightComponent key={highlight.collection} {...highlight} />
+        {DETAILS.map((details) => (
+          <DetailsComponent key={details.address} {...details} />
         ))}
       </div>
     </main>

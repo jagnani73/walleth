@@ -2,7 +2,8 @@ import Image from "next/image";
 
 import type { DetailsProps } from "#/utils/types/shared.types";
 import { Truncate } from "#/utils/functions";
-import { DoubleChevronRightIcon } from "#/public/icons";
+import { BrowserIcon, DoubleChevronRightIcon } from "#/public/icons";
+import { TwitterLogo } from "#/public/logos";
 
 const DetailsComponent: React.FC<DetailsProps> = ({
   address,
@@ -25,21 +26,48 @@ const DetailsComponent: React.FC<DetailsProps> = ({
             height={72}
             className="rounded-full border-2 border-night"
           />
-          <figcaption className="w-fit rounded-[44px] bg-orange-web-10 p-2 text-xs font-semibold text-xanthous">
+          <figcaption className="w-fit rounded-[44px] bg-orange-web-10 p-2 text-xs font-semibold leading-3 text-xanthous ">
             LVL {level}
           </figcaption>
         </figure>
 
         <div>
-          <h2 className="text-xl font-medium text-white">{ens}</h2>
-          <h4 className="text-xs text-silver">{Truncate(address)}</h4>
+          <h2 className="text-xl font-medium leading-8 text-white">{ens}</h2>
+          <h4 className="text-xs leading-5 text-silver">{Truncate(address)}</h4>
         </div>
       </div>
 
-      <p className="text-sm text-silver">{description}</p>
+      <div className="flex gap-x-4">
+        <a
+          href={socials.twitter.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-x-2 rounded-3xl bg-eerie-black px-2 py-1"
+        >
+          <span className="flex h-6 w-6">
+            <TwitterLogo />
+          </span>
+          <span className="text-xs leading-5 text-silver">
+            @{socials.twitter.username}
+          </span>
+        </a>
+
+        <a
+          href={socials.website}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex h-8 w-8 items-center justify-center rounded-full bg-eerie-black p-1"
+        >
+          <span className="flex h-6 w-6 text-silver">
+            <BrowserIcon />
+          </span>
+        </a>
+      </div>
+
+      <p className="text-sm leading-[23.8px] text-silver">{description}</p>
 
       <div className="flex w-full flex-col gap-y-2">
-        <p className="text-xs text-silver">
+        <p className="text-xs leading-5 text-silver">
           Common communities ({communities.length})
         </p>
         <div className="flex flex-wrap gap-2">
@@ -64,7 +92,7 @@ const DetailsComponent: React.FC<DetailsProps> = ({
               special
                 ? "border-xanthous text-xanthous"
                 : "border-eerie-black text-silver"
-            } flex gap-x-2 rounded-[40px] border px-[10px] py-[6px] text-xs font-medium`}
+            } flex gap-x-2 rounded-[40px] border px-[10px] py-[6px] text-xs font-medium leading-4`}
           >
             <span>{name}</span>
             <span>{percentage}</span>

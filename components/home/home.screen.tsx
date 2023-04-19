@@ -18,12 +18,13 @@ const HomeScreen: React.FC = () => {
         ens: "dingaling.eth",
         img: "/nft.png",
         level: 3,
-        socials: [
-          {
-            content: "dingaling",
+        socials: {
+          twitter: {
+            username: "dingaling",
             url: "https://twitter.com",
           },
-        ],
+          website: "https://website.com",
+        },
         traits: [
           {
             name: "Art",

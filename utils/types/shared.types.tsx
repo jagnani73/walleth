@@ -6,9 +6,12 @@ export interface DetailsProps {
   address: string;
   level: number;
   socials: {
-    content: React.ReactNode;
-    url: string;
-  }[];
+    twitter: {
+      username: string;
+      url: string;
+    };
+    website: string;
+  };
   description: string;
   communities: string[];
   traits: {

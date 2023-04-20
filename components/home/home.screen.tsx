@@ -26,10 +26,7 @@ const HomeScreen: React.FC = () => {
         img: "/nfts/details/dp 1.png",
         level: 2,
         socials: {
-          twitter: {
-            username: "dingalingts",
-            url: "https://twitter.com",
-          },
+          twitter: "dingalingts",
           website: "https://website.com",
         },
         traits: [
@@ -187,31 +184,31 @@ const HomeScreen: React.FC = () => {
   );
 
   return (
-    <main className="font- flex h-full w-full flex-col items-center justify-center gap-y-8 py-8">
-      <div className="flex flex-wrap gap-x-8">
-        <div className="flex gap-x-8">
+    <main className="flex h-full w-full flex-col items-center justify-center gap-y-8 py-8">
+      <div className="mx-auto mt-72 flex h-fit w-full flex-col gap-8 2xl:mt-0 2xl:w-fit 2xl:flex-row">
+        <div className="mx-auto flex gap-x-8">
           {DETAILS.map((details) => (
             <DetailsComponent key={details.address} {...details} />
           ))}
         </div>
 
-        <div className="flex h-full flex-col">
-          <div className="mb-auto flex gap-x-8">
+        <div className="flex h-full w-full flex-col">
+          <div className="mx-auto flex w-full justify-center gap-x-8 overflow-x-auto p-4 2xl:mb-auto 2xl:p-0">
             {HIGHLIGHTS.map((highlight) => (
               <HighlightComponent key={highlight.collection} {...highlight} />
             ))}
           </div>
 
-          <h1 className="my-auto pt-8 text-3xl font-bold text-eerie-black">
+          <h1 className="mx-auto pt-8 text-3xl font-bold text-eerie-black 2xl:my-auto 2xl:ml-0">
             Recent Sales
           </h1>
 
-          <div className="mt-auto flex h-fit w-fit rounded-2xl bg-eerie-black bg-opacity-20 px-8 backdrop-blur-3xl">
+          <div className="mx-auto mb-4 mt-auto flex h-fit w-11/12 rounded-2xl bg-eerie-black bg-opacity-20 px-8 backdrop-blur-3xl 2xl:mb-0 2xl:w-full">
             <Marquee
               height="400px"
               duration={10000}
               pauseOnHover
-              width="1069px"
+              width="100%"
               align="end"
               className="transform-gpu"
             >

@@ -25,7 +25,7 @@ module.exports = {
         },
       },
       backgroundImage: {
-        home: "url('/bg.png')",
+        home: "url('/images/home-bg.png')",
       },
       transitionDuration: {
         5000: 5000,

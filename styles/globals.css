@@ -42,5 +42,6 @@
 
   html {
     @apply bg-home bg-cover bg-fixed bg-center bg-no-repeat;
+    scrollbar-gutter: auto !important;
   }
 }

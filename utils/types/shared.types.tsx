@@ -6,10 +6,7 @@ export interface DetailsProps {
   address: string;
   level: number;
   socials: {
-    twitter: {
-      username: string;
-      url: string;
-    };
+    twitter: string;
     website: string;
   };
   description: string;

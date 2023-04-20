@@ -46,7 +46,7 @@ const DetailsComponent: React.FC<DetailsProps> = ({
 
       <div className="flex gap-x-4">
         <a
-          href={socials.twitter.url}
+          href={`https://twitter.com/${socials.twitter}`}
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center gap-x-2 rounded-3xl bg-eerie-black px-2 py-1"
@@ -55,7 +55,7 @@ const DetailsComponent: React.FC<DetailsProps> = ({
             <TwitterLogo />
           </span>
           <span className="text-xs leading-5 text-silver">
-            @{socials.twitter.username}
+            @{socials.twitter}
           </span>
         </a>
 

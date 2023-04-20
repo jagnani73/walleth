@@ -27,6 +27,12 @@ module.exports = {
       backgroundImage: {
         home: "url('/bg.png')",
       },
+      transitionDuration: {
+        1200: 1200,
+      },
+      fontFamily: {
+        "sharp-grotesk": ["Sharp-Grotesk", "sans"],
+      },
     },
   },
   plugins: [],

@@ -1,3 +1,2 @@
-export { default as CardComponent } from "./card.component";
-export { default as DetailsComponent } from "./details.component";
-export { default as HighlightComponent } from "./highlight.component";
+export { default as CircularProgress } from "./circular-progress.component";
+export { default as Navbar } from "./navbar.component";

@@ -3,10 +3,41 @@
 @tailwind utilities;
 
 @layer base {
+  @font-face {
+    font-family: "Sharp-Grotesk";
+    src: url("/fonts/SharpGrotesk-Light20.otf") format("opentype");
+    font-weight: 300;
+  }
+  @font-face {
+    font-family: "Sharp-Grotesk";
+    src: url("/fonts/SharpGrotesk-Book20.otf") format("opentype");
+    font-weight: 400;
+  }
+  @font-face {
+    font-family: "Sharp-Grotesk";
+    src: url("/fonts/SharpGrotesk-Medium20.otf") format("opentype");
+    font-weight: 500;
+  }
+  @font-face {
+    font-family: "Sharp-Grotesk";
+    src: url("/fonts/SharpGrotesk-SemiBold20.otf") format("opentype");
+    font-weight: 600;
+  }
+  @font-face {
+    font-family: "Sharp-Grotesk";
+    src: url("/fonts/SharpGrotesk-Bold20.otf") format("opentype");
+    font-weight: 700;
+  }
+  @font-face {
+    font-family: "Sharp-Grotesk";
+    src: url("/fonts/SharpGrotesk-Black20.otf") format("opentype");
+    font-weight: 900;
+  }
+
   html,
   body,
   #__next {
-    @apply m-0 h-full w-full p-0;
+    @apply m-0 h-full w-full p-0 font-sharp-grotesk;
   }
 
   html {

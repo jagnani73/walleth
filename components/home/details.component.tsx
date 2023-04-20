@@ -1,9 +1,11 @@
+import { useEffect, useState } from "react";
 import Image from "next/image";
 
 import type { DetailsProps } from "#/utils/types/shared.types";
 import { Truncate } from "#/utils/functions";
 import { BrowserIcon, DoubleChevronRightIcon } from "#/public/icons";
 import { TwitterLogo } from "#/public/logos";
+import { CircularProgress } from "../shared";
 
 const DetailsComponent: React.FC<DetailsProps> = ({
   address,
@@ -15,18 +17,23 @@ const DetailsComponent: React.FC<DetailsProps> = ({
   socials,
   traits,
 }) => {
+  const [percentage, setPercentage] = useState<number>(0);
+
+  useEffect(() => {
+    setPercentage(70);
+  }, []);
+
   return (
     <article className="flex w-[292px] flex-col gap-y-8 rounded-2xl bg-night p-4 pb-6">
       <div className="flex w-full items-center gap-x-3">
         <figure className="flex flex-col items-center gap-y-1">
-          <Image
-            src={img}
-            alt={`${ens} @ wall.app`}
-            width={72}
-            height={72}
-            className="rounded-full border-2 border-night"
+          <CircularProgress
+            baseColor="#F8A9101A"
+            highlightColor="#F8A910"
+            percentage={percentage}
+            image={img}
           />
-          <figcaption className="w-fit rounded-[44px] bg-orange-web-10 p-2 text-xs font-semibold leading-3 text-xanthous ">
+          <figcaption className="w-fit rounded-[44px] bg-orange-web-10 p-2 text-xs font-semibold leading-3 text-xanthous">
             LVL {level}
           </figcaption>
         </figure>
@@ -88,10 +95,11 @@ const DetailsComponent: React.FC<DetailsProps> = ({
         {traits.map(({ name, percentage, special }) => (
           <p
             key={name}
-            className={`${special
-              ? "border-xanthous text-xanthous"
-              : "border-eerie-black text-silver"
-              } flex gap-x-2 rounded-[40px] border px-[10px] py-[6px] text-xs font-medium leading-4`}
+            className={`${
+              special
+                ? "border-xanthous text-xanthous"
+                : "border-eerie-black text-silver"
+            } flex gap-x-2 rounded-[40px] border px-[10px] py-[6px] text-xs font-medium leading-4`}
           >
             <span>{name}</span>
             <span>{percentage}%</span>
@@ -101,11 +109,20 @@ const DetailsComponent: React.FC<DetailsProps> = ({
 
       <button
         type="button"
-        className="flex w-full items-center justify-center gap-2 rounded-3xl border border-silver py-3 leading-5 text-seasalt"
+        className="group relative overflow-hidden rounded-3xl border border-silver p-3 leading-5 text-seasalt"
       >
-        Subscribe{" "}
-        <span className="flex h-4 w-4">
-          <DoubleChevronRightIcon />
+        <span className="absolute right-full top-0 z-10 h-full w-full rounded-3xl bg-xanthous transition-all group-hover:right-0" />
+
+        <span className="relative z-20 flex w-full items-center justify-between transition-all ease-linear group-hover:text-eerie-black">
+          <span className="ml-auto transform transition-all duration-300 ease-linear group-hover:-translate-x-16">
+            Subscribe
+          </span>
+
+          <span className="ml-2 mr-auto transform transition-all duration-300 ease-linear group-hover:translate-x-16">
+            <span className="flex h-4 w-4">
+              <DoubleChevronRightIcon />
+            </span>
+          </span>
         </span>
       </button>
     </article>

@@ -42,3 +42,11 @@ export interface HighlightProps {
   age: string;
   xp: number;
 }
+
+export interface CircularProgressProps {
+  percentage: number;
+  baseColor: string;
+  highlightColor: string;
+  className?: string;
+  image: string;
+}

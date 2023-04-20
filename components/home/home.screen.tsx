@@ -1,10 +1,12 @@
+import Marquee from "react-easy-marquee";
+
 import {
   CardProps,
   DetailsProps,
   HighlightProps,
 } from "#/utils/types/shared.types";
 import { useMemo } from "react";
-import { CardComponent, DetailsComponent, HighlightComponent } from "../shared";
+import { CardComponent, DetailsComponent, HighlightComponent } from ".";
 import { NFT_STATUS } from "#/utils/constants/shared.constants";
 
 const HomeScreen: React.FC = () => {
@@ -12,7 +14,12 @@ const HomeScreen: React.FC = () => {
     () => [
       {
         address: "0xadgfB24e8CB73D165787dcEb9A6B2D8J6d51jkld",
-        communities: ["/nfts/details/community 1.png", "/nfts/details/community 2.png", "/nfts/details/community 3.png", "/nfts/details/community 4.png"],
+        communities: [
+          "/nfts/details/community 1.png",
+          "/nfts/details/community 2.png",
+          "/nfts/details/community 3.png",
+          "/nfts/details/community 4.png",
+        ],
         description:
           "An Investor / Collector of #NFTs and OG enthusiast. Co-Founder and owner of 📦  @nftboxes",
         ens: "dingaling.eth",
@@ -45,7 +52,8 @@ const HomeScreen: React.FC = () => {
             name: "Metaverse",
             percentage: 12,
             special: false,
-          }, {
+          },
+          {
             name: "Gaming",
             percentage: 12,
             special: false,
@@ -100,7 +108,8 @@ const HomeScreen: React.FC = () => {
         },
         img: "/nfts/cards/nft 3.png",
         owner: "MoonBirds #9839",
-      }, {
+      },
+      {
         age: "3 months",
         bought: 2.82,
         floor: {
@@ -110,7 +119,8 @@ const HomeScreen: React.FC = () => {
         },
         img: "/nfts/cards/nft 4.png",
         owner: "Otherdeed #9839",
-      }, {
+      },
+      {
         age: "3 months",
         bought: 2.82,
         floor: {
@@ -177,23 +187,42 @@ const HomeScreen: React.FC = () => {
   );
 
   return (
-    <main className="flex w-full flex-col">
-      <div className="mt-8 flex gap-x-8">
-        {HIGHLIGHTS.map((highlight) => (
-          <HighlightComponent key={highlight.collection} {...highlight} />
-        ))}
-      </div>
+    <main className="font- flex h-full w-full flex-col items-center justify-center gap-y-8 py-8">
+      <div className="flex flex-wrap gap-x-8">
+        <div className="flex gap-x-8">
+          {DETAILS.map((details) => (
+            <DetailsComponent key={details.address} {...details} />
+          ))}
+        </div>
 
-      <div className="mt-8 flex gap-x-8">
-        {CARDS.map((card) => (
-          <CardComponent key={card.bought} {...card} />
-        ))}
-      </div>
+        <div className="flex h-full flex-col">
+          <div className="mb-auto flex gap-x-8">
+            {HIGHLIGHTS.map((highlight) => (
+              <HighlightComponent key={highlight.collection} {...highlight} />
+            ))}
+          </div>
 
-      <div className="mt-8 flex gap-x-8">
-        {DETAILS.map((details) => (
-          <DetailsComponent key={details.address} {...details} />
-        ))}
+          <h1 className="my-auto pt-8 text-3xl font-bold text-eerie-black">
+            Recent Sales
+          </h1>
+
+          <div className="mt-auto flex h-fit w-fit rounded-2xl bg-eerie-black bg-opacity-20 px-8 backdrop-blur-3xl">
+            <Marquee
+              height="400px"
+              duration={10000}
+              pauseOnHover
+              width="1069px"
+              align="end"
+              className="transform-gpu"
+            >
+              <div className="mx-auto flex justify-around py-40">
+                {CARDS.map((card) => (
+                  <CardComponent key={card.bought} {...card} />
+                ))}
+              </div>
+            </Marquee>
+          </div>
+        </div>
       </div>
     </main>
   );

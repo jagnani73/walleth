@@ -24,6 +24,9 @@ module.exports = {
           10: "#25b5d433",
         },
       },
+      backgroundImage: {
+        home: "url('/bg.png')",
+      },
     },
   },
   plugins: [],

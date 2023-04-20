@@ -73,7 +73,7 @@ const DetailsComponent: React.FC<DetailsProps> = ({
         <div className="flex flex-wrap gap-2">
           {communities.map((community) => (
             <Image
-              key={`${community}${Math.random()}`}
+              key={community}
               src={community}
               alt="community @ wall.app"
               width={48}
@@ -88,21 +88,20 @@ const DetailsComponent: React.FC<DetailsProps> = ({
         {traits.map(({ name, percentage, special }) => (
           <p
             key={name}
-            className={`${
-              special
-                ? "border-xanthous text-xanthous"
-                : "border-eerie-black text-silver"
-            } flex gap-x-2 rounded-[40px] border px-[10px] py-[6px] text-xs font-medium leading-4`}
+            className={`${special
+              ? "border-xanthous text-xanthous"
+              : "border-eerie-black text-silver"
+              } flex gap-x-2 rounded-[40px] border px-[10px] py-[6px] text-xs font-medium leading-4`}
           >
             <span>{name}</span>
-            <span>{percentage}</span>
+            <span>{percentage}%</span>
           </p>
         ))}
       </div>
 
       <button
         type="button"
-        className="flex w-full items-center justify-center gap-2 rounded-3xl border border-silver py-3 text-seasalt"
+        className="flex w-full items-center justify-center gap-2 rounded-3xl border border-silver py-3 leading-5 text-seasalt"
       >
         Subscribe{" "}
         <span className="flex h-4 w-4">

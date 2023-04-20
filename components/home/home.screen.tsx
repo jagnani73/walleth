@@ -11,16 +11,16 @@ const HomeScreen: React.FC = () => {
   const DETAILS = useMemo<DetailsProps[]>(
     () => [
       {
-        address: "0x83C1B24e8CB73D165787dcEb9A6B2D8J6d5188fD",
-        communities: ["/nft.png", "/nft.png", "/nft.png"],
+        address: "0xadgfB24e8CB73D165787dcEb9A6B2D8J6d51jkld",
+        communities: ["/nfts/details/community 1.png", "/nfts/details/community 2.png", "/nfts/details/community 3.png", "/nfts/details/community 4.png"],
         description:
           "An Investor / Collector of #NFTs and OG enthusiast. Co-Founder and owner of 📦  @nftboxes",
         ens: "dingaling.eth",
-        img: "/nft.png",
-        level: 3,
+        img: "/nfts/details/dp 1.png",
+        level: 2,
         socials: {
           twitter: {
-            username: "dingaling",
+            username: "dingalingts",
             url: "https://twitter.com",
           },
           website: "https://website.com",
@@ -45,6 +45,20 @@ const HomeScreen: React.FC = () => {
             name: "Metaverse",
             percentage: 12,
             special: false,
+          }, {
+            name: "Gaming",
+            percentage: 12,
+            special: false,
+          },
+          {
+            name: "PFP",
+            percentage: 12,
+            special: false,
+          },
+          {
+            name: "ens",
+            percentage: 12,
+            special: false,
           },
         ],
       },
@@ -56,36 +70,56 @@ const HomeScreen: React.FC = () => {
     () => [
       {
         age: "3 months",
-        bought: 12.82,
+        bought: 2.82,
         floor: {
           percentage: 21.6,
           increment: true,
           value: 12.74,
         },
-        img: "/nft.png",
+        img: "/nfts/cards/nft 1.png",
         owner: "Azuki #9839",
       },
       {
         age: "3 months",
-        bought: 12.82,
+        bought: 2.82,
         floor: {
           percentage: 21.6,
           increment: true,
           value: 12.74,
         },
-        img: "/nft.png",
-        owner: "Azki #9839",
+        img: "/nfts/cards/nft 2.png",
+        owner: "MAYC #9839",
       },
       {
         age: "3 months",
-        bought: 12.82,
+        bought: 2.82,
         floor: {
           percentage: 21.6,
           increment: true,
           value: 12.74,
         },
-        img: "/nft.png",
-        owner: "Azufki #9839",
+        img: "/nfts/cards/nft 3.png",
+        owner: "MoonBirds #9839",
+      }, {
+        age: "3 months",
+        bought: 2.82,
+        floor: {
+          percentage: 21.6,
+          increment: true,
+          value: 12.74,
+        },
+        img: "/nfts/cards/nft 4.png",
+        owner: "Otherdeed #9839",
+      }, {
+        age: "3 months",
+        bought: 2.82,
+        floor: {
+          percentage: 21.6,
+          increment: true,
+          value: 12.74,
+        },
+        img: "/nfts/cards/nft 5.png",
+        owner: "Cryptoz #9839",
       },
     ],
     []
@@ -94,11 +128,11 @@ const HomeScreen: React.FC = () => {
   const HIGHLIGHTS = useMemo<HighlightProps[]>(
     () => [
       {
-        age: "10 days ago",
+        age: "2 months ago",
         collection: "ENS Linked",
-        cost: 95.2,
-        img: "/nft.png",
-        owner: "CryptoPunk #2131",
+        cost: 1.82,
+        img: "/nfts/highlights/nft 1.png",
+        owner: "dingaling.eth",
         status: NFT_STATUS.ENS_LINKED,
         xp: 200,
       },
@@ -106,27 +140,36 @@ const HomeScreen: React.FC = () => {
         age: "10 days ago",
         collection: "Best Flip",
         cost: 95.2,
-        img: "/nft.png",
+        img: "/nfts/highlights/nft 2.png",
         owner: "CryptoPunk #2131",
         status: NFT_STATUS.SOLD,
-        xp: 200,
+        xp: 150,
       },
       {
         age: "10 days ago",
-        collection: "Should have been sold",
-        cost: 95.2,
-        img: "/nft.png",
-        owner: "CryptoPunk #2131",
+        collection: "Should have sold",
+        cost: 98.5,
+        img: "/nfts/highlights/nft 3.png",
+        owner: "Rare Apepe #6974",
         status: NFT_STATUS.MINT,
         xp: 200,
       },
       {
         age: "10 days ago",
         collection: "First NFT bought",
-        cost: 95.2,
-        img: "/nft.png",
-        owner: "CryptoPunk #2131",
+        cost: 98.5,
+        img: "/nfts/highlights/nft 4.png",
+        owner: "BAYC #7925",
         status: NFT_STATUS.BOUGHT,
+        xp: 10,
+      },
+      {
+        age: "10 days ago",
+        collection: "Paper Handed",
+        cost: 98.5,
+        img: "/nfts/highlights/nft 5.png",
+        owner: "Moonbird #7866",
+        status: NFT_STATUS.SOLD,
         xp: 200,
       },
     ],
@@ -134,7 +177,7 @@ const HomeScreen: React.FC = () => {
   );
 
   return (
-    <main>
+    <main className="flex w-full flex-col">
       <div className="mt-8 flex gap-x-8">
         {HIGHLIGHTS.map((highlight) => (
           <HighlightComponent key={highlight.collection} {...highlight} />

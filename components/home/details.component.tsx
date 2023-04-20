@@ -92,9 +92,9 @@ const DetailsComponent: React.FC<DetailsProps> = ({
       </div>
 
       <div className="flex flex-wrap gap-2">
-        {traits.map(({ name, percentage, special }) => (
+        {traits.map(({ name, percentage, special }, i) => (
           <p
-            key={name}
+            key={name + i}
             className={`${
               special
                 ? "border-xanthous text-xanthous"

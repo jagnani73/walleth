@@ -19,7 +19,7 @@ const CircularProgress: React.FC<CircularProgressProps> = ({
   return (
     <svg
       viewBox="0 0 100 100"
-      className={`h-[84px] w-[84px] transition-all duration-1200 ${className}`}
+      className={`duration-5000 h-[84px] w-[84px] transition-all ${className}`}
     >
       <defs>
         <clipPath id="circleClip">
@@ -36,7 +36,7 @@ const CircularProgress: React.FC<CircularProgressProps> = ({
         strokeLinecap="round"
         strokeDasharray={`${CIRCUMFERENCE} ${CIRCUMFERENCE}`}
         strokeDashoffset="0"
-        className="transition-all duration-1200"
+        className="duration-5000 transition-all"
       />
       <circle
         cx="50"
@@ -49,7 +49,7 @@ const CircularProgress: React.FC<CircularProgressProps> = ({
         strokeDasharray={`${CIRCUMFERENCE} ${CIRCUMFERENCE}`}
         strokeDashoffset={OFFSET}
         transform="rotate(-90) translate(-100) rotate(180 50 50)"
-        className="transition-all duration-1200"
+        className="duration-5000 transition-all"
       />
       <image
         href={image}

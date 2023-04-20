@@ -28,7 +28,7 @@ module.exports = {
         home: "url('/bg.png')",
       },
       transitionDuration: {
-        1200: 1200,
+        5000: 5000,
       },
       fontFamily: {
         "sharp-grotesk": ["Sharp-Grotesk", "sans"],

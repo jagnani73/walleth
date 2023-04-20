@@ -29,9 +29,9 @@ const HighlightComponent: React.FC<HighlightProps> = ({
 
         <div className="flex w-full flex-col gap-y-2 truncate">
           <p className="flex w-full truncate">
-            <p className="truncate text-sm font-medium leading-5 text-seasalt">
+            <span className="truncate text-sm font-medium leading-5 text-seasalt">
               {collection}
-            </p>
+            </span>
           </p>
           <p className="px-2 py-1 text-xs leading-5 text-spring-green">
             {status}

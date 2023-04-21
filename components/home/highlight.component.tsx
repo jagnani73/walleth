@@ -13,7 +13,7 @@ const HighlightComponent: React.FC<HighlightProps> = ({
   xp,
 }) => {
   return (
-    <article className="relative flex min-w-[202px] flex-col gap-y-6 overflow-hidden rounded-2xl bg-night p-[10px]">
+    <article className="relative flex w-[204px] min-w-[204px] flex-col gap-y-6 overflow-hidden rounded-2xl bg-night p-[10px]">
       <div className="absolute left-8 top-4 h-44 w-44 -translate-x-1/2 -translate-y-1/2 transform rounded-full bg-pacific-cyan-10 blur-xl" />
 
       <div className="z-10 flex w-full gap-x-3">

@@ -19,7 +19,7 @@ const Navbar: React.FC = () => {
             .fill(null)
             .map((i) => (
               <Link key={i + Math.random()} href="/" className="text-xl">
-                dummy
+                <button onClick={() => setDevNotes(true)}>dummy</button>
               </Link>
             ))}
         </div>

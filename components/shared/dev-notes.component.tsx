@@ -15,6 +15,7 @@ const DevNotes: React.FC = () => {
       "Over-engineering thoughts for using SSG via Next's `getStaticProps were a part of the development journey.`",
       "There is added pizzas for when you go over to subscribe to an NFT creators profile.",
       "The page is responsive to various screen sizes.",
+      "The creator's profiles progress is animated",
       "Pizzaz has been written as pizzas on purpose.",
       "Hovering over the cards for Recent Sales is a journey.",
       "The font Sharp Grotesk was added for refinement.",

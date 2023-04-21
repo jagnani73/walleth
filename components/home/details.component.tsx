@@ -6,6 +6,7 @@ import { Truncate } from "#/utils/functions";
 import { BrowserIcon, DoubleChevronRightIcon } from "#/public/icons";
 import { TwitterLogo } from "#/public/logos";
 import { CircularProgress } from "../shared";
+import { useDevNotes } from "#/utils/store/dev-notes";
 
 const DetailsComponent: React.FC<DetailsProps> = ({
   address,
@@ -19,8 +20,10 @@ const DetailsComponent: React.FC<DetailsProps> = ({
 }) => {
   const [percentage, setPercentage] = useState<number>(0);
 
+  const { setDevNotes } = useDevNotes();
+
   useEffect(() => {
-    setPercentage(70);
+    setTimeout(() => setPercentage(70), 1000);
   }, []);
 
   return (
@@ -110,6 +113,7 @@ const DetailsComponent: React.FC<DetailsProps> = ({
       <button
         type="button"
         className="group relative overflow-hidden rounded-3xl border border-silver p-3 leading-5 text-seasalt"
+        onClick={() => setDevNotes(true)}
       >
         <span className="absolute right-full top-0 z-10 h-full w-full rounded-3xl bg-xanthous transition-all group-hover:right-0" />
 

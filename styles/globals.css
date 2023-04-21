@@ -37,7 +37,7 @@
   html,
   body,
   #__next {
-    @apply m-0 h-full w-full p-0 font-sharp-grotesk;
+    @apply m-0 h-full min-h-[calc(var(--vh,1vh)*100)] w-full p-0 font-sharp-grotesk;
   }
 
   html {

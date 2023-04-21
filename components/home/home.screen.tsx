@@ -184,8 +184,8 @@ const HomeScreen: React.FC = () => {
   );
 
   return (
-    <main className="flex h-full w-full flex-col items-center justify-center gap-y-8 py-8">
-      <div className="mx-auto mt-72 flex h-fit w-full flex-col gap-8 2xl:mt-0 2xl:w-fit 2xl:flex-row">
+    <main className="flex h-full w-full flex-col gap-y-8 py-8 2xl:items-center 2xl:justify-center">
+      <div className="mx-auto flex h-fit w-full flex-col gap-8 2xl:w-fit 2xl:flex-row">
         <div className="mx-auto flex gap-x-8">
           {DETAILS.map((details) => (
             <DetailsComponent key={details.address} {...details} />
@@ -193,7 +193,7 @@ const HomeScreen: React.FC = () => {
         </div>
 
         <div className="flex h-full w-full flex-col">
-          <div className="mx-auto flex w-full justify-center gap-x-8 overflow-x-auto p-4 2xl:mb-auto 2xl:p-0">
+          <div className="mx-auto flex w-full gap-x-8 overflow-x-auto p-4 xl:justify-center 2xl:mb-auto 2xl:p-0">
             {HIGHLIGHTS.map((highlight) => (
               <HighlightComponent key={highlight.collection} {...highlight} />
             ))}
